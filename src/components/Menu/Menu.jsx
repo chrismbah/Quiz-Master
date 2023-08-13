@@ -31,6 +31,7 @@ export default function Menu() {
   }
   return (
     <div className="menu">
+      <div className="box">
       <div className="text">
         <h2>Welcome To Quiz Master Pro!</h2>
         <h3>
@@ -58,11 +59,14 @@ export default function Menu() {
           </form>
         </div>
       </div>
-      <div className="menu-button">
+      <div className="action-button">
         <button onClick={handleClick}>
           Continue <i class="fa-solid fa-arrow-right"></i>
         </button>
       </div>
+        
+         </div>
+      
     </div>
   );
 }
