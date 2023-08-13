@@ -9,11 +9,12 @@
     border:none;
     font-size:1.4rem;
     cursor:pointer;
+    border-radius: 20px;
     transition:.1s ease-in;
 
 }
 .select-options button:hover{
-    box-shadow: 1px 2px 1px 1px rgba(134, 134, 134, 0.459);
+    box-shadow: 1px 2px 5px 1px rgba(134, 134, 134, 0.459);
     transform:scale(.9)
 }
 .select-options button span{
@@ -22,3 +23,7 @@
 .select-options i{
     color:purple;
 }
+.category .action-button button{
+  bottom: 5%;
+  right: 5%;
+} 
