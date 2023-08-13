@@ -1,0 +1,24 @@
+.select-options{
+    display:flex;
+    flex-direction:column;
+}
+.select-options button{
+    padding:12px;
+    margin: 5px 0 25px;
+    background:none;
+    border:none;
+    font-size:1.4rem;
+    cursor:pointer;
+    transition:.1s ease-in;
+
+}
+.select-options button:hover{
+    box-shadow: 1px 2px 1px 1px rgba(134, 134, 134, 0.459);
+    transform:scale(.9)
+}
+.select-options button span{
+    margin-right:10px
+}
+.select-options i{
+    color:purple;
+}
