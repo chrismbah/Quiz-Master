@@ -1,0 +1,54 @@
+.menu{
+    position: relative;
+    width: 50%;
+    margin: auto;
+    height: 500px;
+    border-radius: 20px;
+    text-align: left;
+    padding: 10px 20px;
+    box-shadow: 1px 1px 3px 2px rgba(141, 138, 138, 0.5);
+  }
+  .menu h2{
+    text-align: center;
+    padding-top: 10px;
+    color: purple;
+    margin-bottom: 10px;
+  }
+  .menu .text{
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+  }
+  .name{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .name input{
+    outline: none;
+    border: none;
+    padding: 8px ;
+    width: 200px;
+    height: 1.5rem;
+    font-size: 1.1rem;
+    border-bottom: 2px solid black;
+    color: black;
+    margin-bottom: 50px;
+  }
+  .name input::placeholder{
+    color: black;
+  }
+  .name span{
+    font-size: 1.2rem;
+    color: purple;
+  }
+  .menu-button  button{
+    position: absolute;
+    bottom: 15%;
+    right: 30px;
+    width: 150px;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: purple;
+  }
