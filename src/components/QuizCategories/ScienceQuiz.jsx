@@ -12,7 +12,7 @@ export default function ScienceQuiz() {
       setScore(score + 1);
     }
     setCurr(curr + 1);
-    setOptionChosen("")
+    setOptionChosen("");
   }
   function finishQuestion() {
     if (Science[curr].answer === optionChosen) {
