@@ -7,10 +7,12 @@ import "./App.css";
 export const QuizApp = createContext();
 
 export default function App() {
-  const [quizCategory,setQuizCategory]=useState("")
+  const [quizCategory,setQuizCategory]=useState("science")
   const [quizState, setQuizState] = useState("category");
+  const [score,setScore]=useState(0)
+
   return (
-    <QuizApp.Provider value={{ quizState, setQuizState,quizCategory,setQuizCategory }}>
+    <QuizApp.Provider value={{ quizState, setQuizState,quizCategory,setQuizCategory,score,setScore }}>
       <div className="App">
         <div className="header">
           <h2>
