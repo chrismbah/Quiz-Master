@@ -3,7 +3,7 @@ import { QuizApp } from "../../App";
 import "./Menu.css"
 
 export default function Menu() {
-  const { quizState, setQuizState } = useContext(QuizApp);
+  const { setQuizState } = useContext(QuizApp);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const handleSubmit = (e) => {
