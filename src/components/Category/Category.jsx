@@ -4,7 +4,7 @@ import { QuizApp } from "../../App";
 import { useContext } from "react";
 
 export default function Category() {
-  const {quizState,setQuizState,quizCategory,setQuizCategory}=useContext(QuizApp)
+  const {setQuizState,quizCategory,setQuizCategory}=useContext(QuizApp)
   function handleClick(){
     if(quizCategory===""){
       alert("Please pick a category")
