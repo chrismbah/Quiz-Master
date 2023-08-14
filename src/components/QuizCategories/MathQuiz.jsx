@@ -10,16 +10,17 @@ export default function MathQuiz() {
   function nextQuestion() {
     if (Math[curr].answer === optionChosen) {
       setScore(score + 1);
-    // setOptionChosen("")
     }
     setCurr(curr + 1);
     setOptionChosen("")
+    
   }
   function finishQuestion() {
     if (Math[curr].answer === optionChosen) {
       setScore(score + 1);
     }
     setQuizState("end");
+    setOptionChosen("")
   }
   return (
     <div className="Math">

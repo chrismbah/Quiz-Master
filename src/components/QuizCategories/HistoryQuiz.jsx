@@ -10,7 +10,6 @@ export default function HistoryQuiz() {
   function nextQuestion() {
     if (History[curr].answer === optionChosen) {
       setScore(score + 1);
-    // setOptionChosen("")
     }
     setCurr(curr + 1);
     setOptionChosen("")
@@ -21,6 +20,7 @@ export default function HistoryQuiz() {
       setScore(score + 1);
     }
     setQuizState("end");
+    setOptionChosen("")
   }
   return (
     <div className="History">

@@ -20,6 +20,7 @@ export default function ComicsQuiz() {
       setScore(score + 1);
     }
     setQuizState("end");
+    setOptionChosen("")
   }
   return (
     <div className="Comics">

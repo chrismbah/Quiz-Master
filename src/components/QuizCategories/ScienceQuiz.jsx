@@ -12,16 +12,18 @@ export default function ScienceQuiz() {
       setScore(score + 1);
     }
     setCurr(curr + 1);
-    setOptionChosen("");
+    setOptionChosen("")
+    
   }
   function finishQuestion() {
     if (Science[curr].answer === optionChosen) {
       setScore(score + 1);
     }
     setQuizState("end");
+    setOptionChosen("")
   }
   return (
-    <div className="science">
+    <div className="Science">
       <div className="box">
         <div className="question">
           <span>{Science[curr].no}</span>
