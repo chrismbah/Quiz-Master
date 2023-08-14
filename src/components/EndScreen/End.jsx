@@ -3,7 +3,14 @@ import { useContext } from "react";
 import { QuizApp } from "../../App";
 
 export default function End() {
-  const { score,setQuizState } = useContext(QuizApp);
+  const { score, setQuizState, setScore } = useContext(QuizApp);
+  function restart() {
+    setQuizState("category");
+    setScore(0);
+  }
+  function exit() {
+    setQuizState("menu")
+  }
   return (
     <div className="end">
       <div className="box">
@@ -16,8 +23,8 @@ export default function End() {
           </h3>
         </div>
         <div className="restart">
-          <button onClick={()=>setQuizState("category")}>Restart Quiz</button>
-          <button onClick={()=>setQuizState("menu")}>Exit</button>
+          <button onClick={restart}>Restart Quiz</button>
+          <button onClick={exit}>Exit</button>
         </div>
       </div>
     </div>
