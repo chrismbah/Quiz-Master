@@ -1,10 +1,11 @@
 import React, { useContext, useState } from "react";
 import { QuizApp } from "../../App";
-import "./Menu.css";
 import { motion } from "framer-motion";
+import AnimatedButton from "../../animated/AnimatedButton";
+import "./Menu.css";
+
 
 export default function Menu() {
-
   const { setQuizState } = useContext(QuizApp);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -60,6 +61,7 @@ export default function Menu() {
         className="box"
         initial="hidden"
         animate="visible"
+        // whileHover="hover"
         variants={Variants}
       >
         <div className="text">
@@ -89,13 +91,7 @@ export default function Menu() {
             </form>
           </div>
           <div className="action-button">
-            <motion.button
-              onClick={handleClick}
-              // whileHover={{scale:'1.1'}}
-              whileTap={{ scale: "0.9" }}
-            >
-              Continue <i class="fa-solid fa-arrow-right"></i>
-            </motion.button>
+            <AnimatedButton handleClick={handleClick} action="Continue"/>
           </div>
         </div>
       </motion.div>
