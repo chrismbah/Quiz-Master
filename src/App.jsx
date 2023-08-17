@@ -7,19 +7,44 @@ import "./App.css";
 export const QuizApp = createContext();
 
 export default function App() {
-  const [quizCategory,setQuizCategory]=useState("science")
-  const [quizState, setQuizState] = useState("category");
-  const [score,setScore]=useState(0)
+  const [quizCategory, setQuizCategory] = useState("science");
+  const [quizState, setQuizState] = useState("end");
+  const [score, setScore] = useState(0);
+  const [dark, setDark] = useState(false);
+
+  function toggleBtn() {
+    setDark(!dark);
+  }
 
   return (
-    <QuizApp.Provider value={{ quizState, setQuizState,quizCategory,setQuizCategory,score,setScore }}>
-      <div className="App">
-        <div className="header">
+    <QuizApp.Provider
+      value={{
+        quizState,
+        setQuizState,
+        quizCategory,
+        setQuizCategory,
+        score,
+        setScore,
+        dark
+      }}
+    >
+      <div className={`App ${dark ? "App-dark" : ""}`}>
+        <div className={`header ${dark?"header-dark":""}`}>
           <h2>
             Quiz Master Pro <i class="fa-solid fa-lightbulb fa-beat"></i>
           </h2>
           <div className="logos">
-            <i class="fa-brands fa-github"></i>
+            <div className={`github ${dark?"logo-dark":""}`}>
+              <a href="">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+            <div className={`mode ${dark?"logo-dark":""}`}>
+              <i
+                class={` fa-solid ${dark ? " fa-sun" : "fa-moon"}`}
+                onClick={toggleBtn}
+              ></i>
+            </div>
           </div>
         </div>
         {quizState === "menu" && <Menu />}
