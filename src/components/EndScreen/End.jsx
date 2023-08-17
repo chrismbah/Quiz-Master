@@ -1,6 +1,9 @@
 import React from "react";
 import { useContext } from "react";
 import { QuizApp } from "../../App";
+import { motion } from "framer-motion";
+import { Variants } from "../../animated/Variants";
+import "./EndScreen.css";
 
 export default function End() {
   const { score, setQuizState, setScore } = useContext(QuizApp);
@@ -9,24 +12,28 @@ export default function End() {
     setScore(0);
   }
   function exit() {
-    setQuizState("menu")
+    setQuizState("menu");
   }
   return (
     <div className="end">
-      <div className="box">
+      <motion.div
+        className="box"
+        initial="hidden"
+        animate="visible"
+        variants={Variants}
+      >
         <div className="end-text">
           <h2>Quiz Finished!</h2>
         </div>
         <div className="score">
-          <h3>
-            Score: {score}/{20}
-          </h3>
+          Score:
+          <span>{score}</span>/{20}
         </div>
         <div className="restart">
           <button onClick={restart}>Restart Quiz</button>
           <button onClick={exit}>Exit</button>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
