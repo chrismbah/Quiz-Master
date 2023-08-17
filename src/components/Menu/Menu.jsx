@@ -7,7 +7,7 @@ import "./Menu.css";
 
 
 export default function Menu() {
-  const { setQuizState } = useContext(QuizApp);
+  const { setQuizState,dark } = useContext(QuizApp);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
 
