@@ -14,7 +14,8 @@
 
 }
 .select-options button:hover{
-    box-shadow: 1px 2px 5px 1px rgba(134, 134, 134, 0.459);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
     transform:scale(.9)
 }
 .select-options button span{
