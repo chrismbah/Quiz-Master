@@ -12,48 +12,54 @@ export default function ScienceQuiz() {
       setScore(score + 1);
     }
     setCurr(curr + 1);
-    setOptionChosen("")
-    
+    setOptionChosen("");
   }
   function finishQuestion() {
     if (Science[curr].answer === optionChosen) {
       setScore(score + 1);
     }
     setQuizState("end");
-    setOptionChosen("")
+    setOptionChosen("");
   }
   return (
     <div className="Science">
       <div className="box">
         <div className="question">
-          <span>{Science[curr].no}</span>
-          <h3>{Science[curr].question}</h3>
+          <h3>
+            <span>{Science[curr].no}.</span> {Science[curr].question}
+          </h3>
         </div>
         <div className="options">
           <div className="option">
-            <h3>A.</h3>
-            <button onClick={() => setOptionChosen("A")}>
-              {Science[curr].A}
+            <button
+              className={`option-button ${optionChosen==="A"?"selected":""}`}
+              onClick={() => setOptionChosen("A")}
+            >
+              <span>A.</span> {Science[curr].A}
             </button>
           </div>
           <div className="option">
-            <h3>B.</h3>
-            <button onClick={() => setOptionChosen("B")}>
-              {Science[curr].B}
+            <button
+              className={`option-button ${optionChosen==="B"?"selected":""}`}
+              onClick={() => setOptionChosen("B")}
+            >
+              <span>B.</span> {Science[curr].B}
             </button>
           </div>{" "}
           <div className="option">
-            <h3>C.</h3>
-
-            <button onClick={() => setOptionChosen("C")}>
-              {Science[curr].C}
+            <button
+             className={`option-button ${optionChosen==="C"?"selected":""}`}
+              onClick={() => setOptionChosen("C")}
+            >
+              <span>C.</span> {Science[curr].C}
             </button>
           </div>{" "}
           <div className="option">
-            <h3>D.</h3>
-
-            <button onClick={() => setOptionChosen("D")}>
-              {Science[curr].D}
+            <button
+              className={`option-button ${optionChosen==="D"?"selected":""}`}
+              onClick={() => setOptionChosen("D")}
+            >
+              <span>D.</span> {Science[curr].D}
             </button>
           </div>{" "}
         </div>
