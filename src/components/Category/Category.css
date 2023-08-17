@@ -10,17 +10,13 @@
     font-size:1.4rem;
     cursor:pointer;
     border-radius: 20px;
-    transition:.1s ease;
+    transition:.2s ease;
 
 }
 .select-options button:hover{
-    background-color: purple;
-    color: white;
-  
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
-.select-options button:hover i{
-    color: white;
-}
+
 .select-options button span{
     margin-right:10px
 }
