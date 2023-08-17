@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { History } from "../../helpers/History";
 import { useContext } from "react";
 import { QuizApp } from "../../App";
+import { motion } from "framer-motion";
+import { Variants } from "../../animated/Variants";
 
 export default function HistoryQuiz() {
   const { score, setScore, setQuizState } = useContext(QuizApp);
@@ -12,48 +14,58 @@ export default function HistoryQuiz() {
       setScore(score + 1);
     }
     setCurr(curr + 1);
-    setOptionChosen("")
-    
+    setOptionChosen("");
   }
   function finishQuestion() {
     if (History[curr].answer === optionChosen) {
       setScore(score + 1);
     }
     setQuizState("end");
-    setOptionChosen("")
+    setOptionChosen("");
   }
   return (
     <div className="History">
-      <div className="box">
+      <motion.div className="box"
+       initial="hidden"
+       animate="visible"
+       variants={Variants}
+      >
         <div className="question">
-          <span>{History[curr].no}</span>
-          <h3>{History[curr].question}</h3>
+          <h3>
+            <span>{History[curr].no}.</span> {History[curr].question}
+          </h3>
         </div>
         <div className="options">
           <div className="option">
-            <h3>A.</h3>
-            <button onClick={() => setOptionChosen("A")}>
-              {History[curr].A}
+            <button
+              className={`option-button ${optionChosen==="A"?"selected":""}`}
+              onClick={() => setOptionChosen("A")}
+            >
+              <span>A.</span> {History[curr].A}
             </button>
           </div>
           <div className="option">
-            <h3>B.</h3>
-            <button onClick={() => setOptionChosen("B")}>
-              {History[curr].B}
+            <button
+              className={`option-button ${optionChosen==="B"?"selected":""}`}
+              onClick={() => setOptionChosen("B")}
+            >
+              <span>B.</span> {History[curr].B}
             </button>
           </div>{" "}
           <div className="option">
-            <h3>C.</h3>
-
-            <button onClick={() => setOptionChosen("C")}>
-              {History[curr].C}
+            <button
+             className={`option-button ${optionChosen==="C"?"selected":""}`}
+              onClick={() => setOptionChosen("C")}
+            >
+              <span>C.</span> {History[curr].C}
             </button>
           </div>{" "}
           <div className="option">
-            <h3>D.</h3>
-
-            <button onClick={() => setOptionChosen("D")}>
-              {History[curr].D}
+            <button
+              className={`option-button ${optionChosen==="D"?"selected":""}`}
+              onClick={() => setOptionChosen("D")}
+            >
+              <span>D.</span> {History[curr].D}
             </button>
           </div>{" "}
         </div>
@@ -68,7 +80,7 @@ export default function HistoryQuiz() {
             </button>
           )}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

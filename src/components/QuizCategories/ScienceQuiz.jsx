@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Science } from "../../helpers/Science";
 import { useContext } from "react";
 import { QuizApp } from "../../App";
+import { motion } from "framer-motion";
+import { Variants } from "../../animated/Variants";
 
 export default function ScienceQuiz() {
   const { score, setScore, setQuizState } = useContext(QuizApp);
@@ -23,7 +25,11 @@ export default function ScienceQuiz() {
   }
   return (
     <div className="Science">
-      <div className="box">
+      <motion.div className="box"
+       initial="hidden"
+       animate="visible"
+       variants={Variants}
+      >
         <div className="question">
           <h3>
             <span>{Science[curr].no}.</span> {Science[curr].question}
@@ -74,7 +80,7 @@ export default function ScienceQuiz() {
             </button>
           )}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

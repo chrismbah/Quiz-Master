@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Comics } from "../../helpers/Comics";
 import { useContext } from "react";
 import { QuizApp } from "../../App";
+import { motion } from "framer-motion";
+import { Variants } from "../../animated/Variants";
 
 export default function ComicsQuiz() {
   const { score, setScore, setQuizState } = useContext(QuizApp);
@@ -12,48 +14,58 @@ export default function ComicsQuiz() {
       setScore(score + 1);
     }
     setCurr(curr + 1);
-    setOptionChosen("")
-    
+    setOptionChosen("");
   }
   function finishQuestion() {
     if (Comics[curr].answer === optionChosen) {
       setScore(score + 1);
     }
     setQuizState("end");
-    setOptionChosen("")
+    setOptionChosen("");
   }
   return (
     <div className="Comics">
-      <div className="box">
+      <motion.div className="box"
+       initial="hidden"
+       animate="visible"
+       variants={Variants}
+      >
         <div className="question">
-          <span>{Comics[curr].no}</span>
-          <h3>{Comics[curr].question}</h3>
+          <h3>
+            <span>{Comics[curr].no}.</span> {Comics[curr].question}
+          </h3>
         </div>
         <div className="options">
           <div className="option">
-            <h3>A.</h3>
-            <button onClick={() => setOptionChosen("A")}>
-              {Comics[curr].A}
+            <button
+              className={`option-button ${optionChosen==="A"?"selected":""}`}
+              onClick={() => setOptionChosen("A")}
+            >
+              <span>A.</span> {Comics[curr].A}
             </button>
           </div>
           <div className="option">
-            <h3>B.</h3>
-            <button onClick={() => setOptionChosen("B")}>
-              {Comics[curr].B}
+            <button
+              className={`option-button ${optionChosen==="B"?"selected":""}`}
+              onClick={() => setOptionChosen("B")}
+            >
+              <span>B.</span> {Comics[curr].B}
             </button>
           </div>{" "}
           <div className="option">
-            <h3>C.</h3>
-
-            <button onClick={() => setOptionChosen("C")}>
-              {Comics[curr].C}
+            <button
+             className={`option-button ${optionChosen==="C"?"selected":""}`}
+              onClick={() => setOptionChosen("C")}
+            >
+              <span>C.</span> {Comics[curr].C}
             </button>
           </div>{" "}
           <div className="option">
-            <h3>D.</h3>
-
-            <button onClick={() => setOptionChosen("D")}>
-              {Comics[curr].D}
+            <button
+              className={`option-button ${optionChosen==="D"?"selected":""}`}
+              onClick={() => setOptionChosen("D")}
+            >
+              <span>D.</span> {Comics[curr].D}
             </button>
           </div>{" "}
         </div>
@@ -68,7 +80,7 @@ export default function ComicsQuiz() {
             </button>
           )}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

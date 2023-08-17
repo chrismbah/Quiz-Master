@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Math } from "../../helpers/Math";
 import { useContext } from "react";
 import { QuizApp } from "../../App";
+import { motion } from "framer-motion";
+import { Variants } from "../../animated/Variants";
 
 export default function MathQuiz() {
   const { score, setScore, setQuizState } = useContext(QuizApp);
@@ -12,48 +14,58 @@ export default function MathQuiz() {
       setScore(score + 1);
     }
     setCurr(curr + 1);
-    setOptionChosen("")
-    
+    setOptionChosen("");
   }
   function finishQuestion() {
     if (Math[curr].answer === optionChosen) {
       setScore(score + 1);
     }
     setQuizState("end");
-    setOptionChosen("")
+    setOptionChosen("");
   }
   return (
     <div className="Math">
-      <div className="box">
+      <motion.div className="box"
+       initial="hidden"
+       animate="visible"
+       variants={Variants}
+      >
         <div className="question">
-          <span>{Math[curr].no}</span>
-          <h3>{Math[curr].question}</h3>
+          <h3>
+            <span>{Math[curr].no}.</span> {Math[curr].question}
+          </h3>
         </div>
         <div className="options">
           <div className="option">
-            <h3>A.</h3>
-            <button onClick={() => setOptionChosen("A")}>
-              {Math[curr].A}
+            <button
+              className={`option-button ${optionChosen==="A"?"selected":""}`}
+              onClick={() => setOptionChosen("A")}
+            >
+              <span>A.</span> {Math[curr].A}
             </button>
           </div>
           <div className="option">
-            <h3>B.</h3>
-            <button onClick={() => setOptionChosen("B")}>
-              {Math[curr].B}
+            <button
+              className={`option-button ${optionChosen==="B"?"selected":""}`}
+              onClick={() => setOptionChosen("B")}
+            >
+              <span>B.</span> {Math[curr].B}
             </button>
           </div>{" "}
           <div className="option">
-            <h3>C.</h3>
-
-            <button onClick={() => setOptionChosen("C")}>
-              {Math[curr].C}
+            <button
+             className={`option-button ${optionChosen==="C"?"selected":""}`}
+              onClick={() => setOptionChosen("C")}
+            >
+              <span>C.</span> {Math[curr].C}
             </button>
           </div>{" "}
           <div className="option">
-            <h3>D.</h3>
-
-            <button onClick={() => setOptionChosen("D")}>
-              {Math[curr].D}
+            <button
+              className={`option-button ${optionChosen==="D"?"selected":""}`}
+              onClick={() => setOptionChosen("D")}
+            >
+              <span>D.</span> {Math[curr].D}
             </button>
           </div>{" "}
         </div>
@@ -68,7 +80,7 @@ export default function MathQuiz() {
             </button>
           )}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
