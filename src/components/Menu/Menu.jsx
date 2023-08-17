@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { QuizApp } from "../../App";
 import { motion } from "framer-motion";
 import AnimatedButton from "../../animated/AnimatedButton";
+import { Variants } from "../../animated/Variants";
 import "./Menu.css";
 
 
@@ -34,34 +35,13 @@ export default function Menu() {
     }
   }
 
-  const Variants = {
-    hidden: { opacity: 0, y: 70 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 200,
-        damping: 15,
-      },
-    },
-    hover: {
-      scale: 1.1,
-      transition: {
-        type: "spring",
-        duration: 0.3,
-        stiffness: 200,
-        damping: 15,
-      },
-    },
-  };
+
   return (
     <div className="menu">
       <motion.div
         className="box"
         initial="hidden"
         animate="visible"
-        // whileHover="hover"
         variants={Variants}
       >
         <div className="text">
