@@ -4,19 +4,22 @@
 }
 .select-options button{
     padding:12px;
-    margin: 5px 0 25px;
+    margin: 5px 0 15px;
     background:none;
     border:none;
     font-size:1.4rem;
     cursor:pointer;
     border-radius: 20px;
-    transition:.1s ease-in;
+    transition:.1s ease;
 
 }
 .select-options button:hover{
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-
-    transform:scale(.9)
+    background-color: purple;
+    color: white;
+  
+}
+.select-options button:hover i{
+    color: white;
 }
 .select-options button span{
     margin-right:10px
