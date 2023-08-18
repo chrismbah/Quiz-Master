@@ -5,9 +5,8 @@ import AnimatedButton from "../../animated/AnimatedButton";
 import { Variants } from "../../animated/Variants";
 import "./Menu.css";
 
-
 export default function Menu() {
-  const { setQuizState,dark } = useContext(QuizApp);
+  const { setQuizState, dark } = useContext(QuizApp);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
 
@@ -35,9 +34,8 @@ export default function Menu() {
     }
   }
 
-
   return (
-    <div className="menu">
+    <div className={`menu ${dark ? "dark-menu" : ""}`}>
       <motion.div
         className="box"
         initial="hidden"
@@ -71,7 +69,7 @@ export default function Menu() {
             </form>
           </div>
           <div className="action-button">
-            <AnimatedButton handleClick={handleClick} action="Continue"/>
+            <AnimatedButton handleClick={handleClick} action="Continue " />
           </div>
         </div>
       </motion.div>

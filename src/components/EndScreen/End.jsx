@@ -22,7 +22,7 @@ export default function End() {
         animate="visible"
         variants={Variants}
       >
-        <div className="end-text">
+        <div className={`end-text ${dark?"end-text-dark":""}`}>
           <h2>Quiz Finished!</h2>
         </div>
         <div className="score">

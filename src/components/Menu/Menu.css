@@ -1,16 +1,46 @@
   .menu .text{
     margin-bottom: 50px;
   }
-  .text h2,h3{
+  .text h2,.text h3{
+    transition: .3s ease-in;
     font-weight: 500;
   }
- 
+  .dark-menu .text h2,.dark-menu h3{
+    color:  rgb(124, 29, 124);
+  }
+  .dark-menu .name span{
+    color:  rgb(124, 29, 124);
+
+  }
+  .dark-text{
+    color: rgb(146, 146, 146);
+
+  }
+  .dark-menu .box{
+    transition: .7s ease-in;
+    background: rgb(22, 22, 22);
+  }
+  .dark-menu .name input{
+    color: rgb(146, 146, 146);
+    border-bottom: 2px solid white;
+    font-weight: 400;
+
+  }
+  .dark-menu .name input::placeholder{
+    font-weight:400;
+    color: rgb(146, 146, 146);
+  }
+  .dark-right{
+    color: rgb(146, 146, 146);
+
+  }
   .name{
     display: flex;
     flex-direction: column;
     
   }
   .name input{
+    transition: .3s ease-in;
     outline: none;
     border: none;
     padding: 8px ;
@@ -21,13 +51,23 @@
     color: black;
     margin-bottom: 50px;
     background: none;
+    font-weight: 400;
   }
   .name input::placeholder{
+    transition: .3s ease-in;
     color: black;
+    font-weight: 400;
+
   }
   .name span{
     font-size: 1.2rem;
     color: purple;
     font-weight: 500;
   }
- 
+  .right{
+    transition: .3s ease-in;
+    display: inline;
+  }
+  .left{
+    transition: .3s ease-in;
+  }
