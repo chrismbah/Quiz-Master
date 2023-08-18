@@ -13,7 +13,7 @@ export const Variants = {
       scale: 1.1,
       transition: {
         type: "spring",
-        duration: 0.3,
+        // duration: 0.3,
         stiffness: 200,
         damping: 15,
       },

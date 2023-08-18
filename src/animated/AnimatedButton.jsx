@@ -1,7 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useContext } from "react";
+import { QuizApp } from "../App";
 
-export default function AnimatedButton({handleClick,action}) {
+export default function AnimatedButton({ handleClick, action }) {
+  const { dark } = useContext(QuizApp);
   const Variants = {
     hidden: { opacity: 0, y: 70 },
     visible: {
@@ -24,9 +27,11 @@ export default function AnimatedButton({handleClick,action}) {
     },
   };
   return (
-    <motion.button
-      onClick={handleClick}
-      whileTap={{ scale: "0.9" }}
-    >{action} <i class="fa-solid fa-arrow-right"></i></motion.button>
+    <motion.button onClick={handleClick} whileTap={{ scale: "0.9" }}>
+      <label className={`left ${dark?"dark-text":""}`}>{action}</label>
+      <div className={`right ${dark?"dark-right":""}`}>
+      <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    </motion.button>
   );
 }
