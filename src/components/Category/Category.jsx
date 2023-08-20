@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { motion } from "framer-motion";
 
 export default function Category() {
-  const { setQuizState, setQuizCategory, setScore } = useContext(QuizApp);
+  const { setQuizState, setQuizCategory, setScore,dark } = useContext(QuizApp);
   function changeCategory(category) {
     setQuizCategory(category);
     setQuizState("quiz");
@@ -23,7 +23,7 @@ export default function Category() {
     },
   };
   return (
-    <div className="category">
+    <div className={`category ${dark?"category-dark":""}`}>
       <motion.div
         className="box"
         initial="hidden"
