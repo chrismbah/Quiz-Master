@@ -2,6 +2,7 @@
     margin-bottom: 10px;
 }
 .score {
+    transition: .3s ease-in;
     font-size: 1.5rem;
     letter-spacing: 1px;
     text-align: center;
@@ -21,9 +22,26 @@
     font-size:1.2rem;
     cursor:pointer;
     border-radius: 20px;
-    transition:.2s ease;
+    transition:.3s ease-in;
 }
 .restart button:hover{
+    transition:.3s ease-in;
+
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     
 }
+.end-dark button{
+    transition:.3s ease-in;
+    color: white;
+    background: rgb(20, 20, 20);
+    
+}
+ .end-dark button:hover{
+    transition:.3s ease-in;
+  background-color: rgb(29, 29, 29);
+    box-shadow: none
+  }
+  .end-dark .score{
+    transition: .3s ease-in;
+    color: white;
+  }

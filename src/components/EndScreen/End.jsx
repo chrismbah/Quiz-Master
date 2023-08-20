@@ -3,10 +3,11 @@ import { useContext } from "react";
 import { QuizApp } from "../../App";
 import { motion } from "framer-motion";
 import { Variants } from "../../animated/Variants";
+
 import "./EndScreen.css";
 
 export default function End() {
-  const { score, setQuizState, setScore } = useContext(QuizApp);
+  const { score, setQuizState, setScore, dark } = useContext(QuizApp);
   function restart() {
     setQuizState("category");
     setScore(0);
@@ -15,14 +16,14 @@ export default function End() {
     setQuizState("menu");
   }
   return (
-    <div className="end">
+    <div className={`end ${dark?"end-dark":""}`}>
       <motion.div
         className="box"
         initial="hidden"
         animate="visible"
         variants={Variants}
       >
-        <div className={`end-text ${dark?"end-text-dark":""}`}>
+        <div className={`end-text ${dark ? "end-text-dark" : ""}`}>
           <h2>Quiz Finished!</h2>
         </div>
         <div className="score">
@@ -30,8 +31,12 @@ export default function End() {
           <span>{score}</span>/{20}
         </div>
         <div className="restart">
-          <button onClick={restart}>Restart Quiz</button>
-          <button onClick={exit}>Exit</button>
+          <button onClick={restart} >
+            Restart Quiz
+          </button>
+          <button onClick={exit} >
+            Exit
+          </button>
         </div>
       </motion.div>
     </div>
