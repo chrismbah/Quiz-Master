@@ -89,33 +89,5 @@ h2{
   border-radius: 20px;
 }
 .action-button button:hover{
-  background: rgb(141, 8, 141);
-}
-.question span{
-  font-size: 1.7rem;
-  color: purple;
-}
-.question h3{
-  font-weight: 600;
-}
-.question{
-  margin-bottom: 20px;
-}
-.option-button{
-  width: 100%;
-  padding:12px;
-  margin: 5px 0 15px;
-  background-color: #fff;
-  border:none;
-  font-size:1.2rem;
-  cursor:pointer;
-  border-radius: 20px;
-  transition:.2s ease;
-}
-.option-button:hover{
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-}
-.selected{
-  background-color: purple;
-  color: white;
+  background: rgba(141, 8, 141);
 }
