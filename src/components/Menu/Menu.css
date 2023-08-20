@@ -13,7 +13,8 @@
 
   }
   .dark-text{
-    color: rgb(146, 146, 146);
+    /* color: rgb(146, 146, 146); */
+    color: white;
 
   }
   .dark-menu .box{
@@ -21,14 +22,19 @@
     background: rgb(22, 22, 22);
   }
   .dark-menu .name input{
-    color: rgb(146, 146, 146);
+    transition: .3s ease-in;
+    /* color: rgb(146, 146, 146); */
+    color: white;
     border-bottom: 2px solid white;
     font-weight: 400;
 
   }
   .dark-menu .name input::placeholder{
-    font-weight:400;
-    color: rgb(146, 146, 146);
+    font-weight:300;
+    /* color: rgb(146, 146, 146); */
+    color: white;
+    transition: .3s ease-in;
+
   }
   .dark-right{
     color: rgb(146, 146, 146);
@@ -56,7 +62,8 @@
   .name input::placeholder{
     transition: .3s ease-in;
     color: black;
-    font-weight: 400;
+    font-weight: 300;
+    font-size: .9rem;
 
   }
   .name span{
