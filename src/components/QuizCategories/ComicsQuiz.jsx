@@ -25,10 +25,11 @@ export default function ComicsQuiz() {
   }
   return (
     <div className="Comics">
-      <motion.div className="box"
-       initial="hidden"
-       animate="visible"
-       variants={Variants}
+      <motion.div
+        className="box"
+        initial="hidden"
+        animate="visible"
+        variants={Variants}
       >
         <div className="question">
           <h3>
@@ -38,7 +39,9 @@ export default function ComicsQuiz() {
         <div className="options">
           <div className="option">
             <button
-              className={`option-button ${optionChosen==="A"?"selected":""}`}
+              className={`option-button ${
+                optionChosen === "A" ? "selected" : ""
+              }`}
               onClick={() => setOptionChosen("A")}
             >
               <span>A.</span> {Comics[curr].A}
@@ -46,7 +49,9 @@ export default function ComicsQuiz() {
           </div>
           <div className="option">
             <button
-              className={`option-button ${optionChosen==="B"?"selected":""}`}
+              className={`option-button ${
+                optionChosen === "B" ? "selected" : ""
+              }`}
               onClick={() => setOptionChosen("B")}
             >
               <span>B.</span> {Comics[curr].B}
@@ -54,7 +59,9 @@ export default function ComicsQuiz() {
           </div>{" "}
           <div className="option">
             <button
-             className={`option-button ${optionChosen==="C"?"selected":""}`}
+              className={`option-button ${
+                optionChosen === "C" ? "selected" : ""
+              }`}
               onClick={() => setOptionChosen("C")}
             >
               <span>C.</span> {Comics[curr].C}
@@ -62,7 +69,9 @@ export default function ComicsQuiz() {
           </div>{" "}
           <div className="option">
             <button
-              className={`option-button ${optionChosen==="D"?"selected":""}`}
+              className={`option-button ${
+                optionChosen === "D" ? "selected" : ""
+              }`}
               onClick={() => setOptionChosen("D")}
             >
               <span>D.</span> {Comics[curr].D}
