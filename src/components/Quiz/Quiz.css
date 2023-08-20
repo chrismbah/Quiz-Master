@@ -1,0 +1,61 @@
+.question span{
+    font-size: 1.7rem;
+    color: purple;
+  }
+  .question h3{
+    transition: .3s ease-in;
+    font-weight: 600;
+  }
+  .question{
+    margin-bottom: 20px;
+  }
+  .option-button{
+    width: 100%;
+    padding:12px;
+    margin: 5px 0 15px;
+    background-color: #fff;
+    border:none;
+    font-size:1.2rem;
+    cursor:pointer;
+    border-radius: 20px;
+    transition:.3s ease;
+  
+  }
+  .options button{
+    transition: .3s background ease-in;
+  }
+  .option-button:hover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+  .selected{
+    background-color: purple;
+    color: white;
+  }
+  .option .option-button {
+    transition: .3s ease-in;
+    /* transition: .3s color background ease-in; */
+  }
+.quiz-dark .question h3{
+    transition: .3s ease-in;
+     color: rgb(211, 207, 207);
+}
+.quiz-dark .options button{
+    transition: .3s background ease-in;
+    background: rgb(20, 20, 20);
+    color: rgb(211, 207, 207);
+
+}
+.quiz-dark .options button:hover{
+    box-shadow: rgba(0, 0, 0, 0.507) 0px 4px 12px;
+
+
+}
+.quiz-dark .options .selected{
+    background-color: purple;
+    color: white;
+  }
+.quiz-dark .option .option-button {
+    transition: .3s ease-in;
+    /* transition: .3s color background ease-in; */
+
+}
