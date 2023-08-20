@@ -27,3 +27,10 @@
   bottom: 5%;
   right: 5%;
 } 
+.category-dark .select-options button {
+  color: rgb(211, 207, 207);
+}
+.category-dark .select-options button:hover{
+  background-color: rgb(29, 29, 29);
+
+}
