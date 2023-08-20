@@ -8,7 +8,7 @@ export const QuizApp = createContext();
 
 export default function App() {
   const [quizCategory, setQuizCategory] = useState("science");
-  const [quizState, setQuizState] = useState("menu");
+  const [quizState, setQuizState] = useState("category");
   const [score, setScore] = useState(0);
   const [dark, setDark] = useState(false);
 
