@@ -5,11 +5,12 @@ import ComicsQuiz from "../QuizCategories/ComicsQuiz";
 import HistoryQuiz from "../QuizCategories/HistoryQuiz";
 import MathQuiz from "../QuizCategories/MathQuiz";
 import ScienceQuiz from "../QuizCategories/ScienceQuiz";
+import "./Quiz.css"
 
 export default function Quiz() {
-  const { quizCategory } = useContext(QuizApp);
+  const { quizCategory,dark } = useContext(QuizApp);
   return (
-    <div className="quiz">
+    <div className={`quiz ${dark?"quiz-dark":""}`}>
       {quizCategory === "comics" && <ComicsQuiz />}
       {quizCategory === "science" && <ScienceQuiz />}
       {quizCategory === "history" && <HistoryQuiz />}
