@@ -4,34 +4,43 @@
   padding: 0;
   box-sizing: border-box;
   font-family:"Poppins",sans-serif ;
-
+}
+:root{
+  --color-primary-100: #382bf0;
+  --color-primary-200: #5e43f3;
+  --color-primary-300: #7a5af5;
+  --color-primary-400: #9171f8;
+  --color-primary-500: #a688fa;
+  --color-primary-600: #ba9ffb;
+  --color-surface-mixed-100: #1a1625;
+  --color-surface-mixed-200: #2f2b3a;
+  --color-surface-mixed-300: #46424f;
+  --color-surface-mixed-400: #5e5a66;
+  --color-surface-mixed-500: #76737e;
+  --color-surface-mixed-600: #908d96;
+  --color-surface-mixed-700: #9f9da3;
 }
 .App{
   height: 100vh;
   transition: .3s ease-in;
 }
-.App-dark{
- /* background: #121212; */
- background: rgb(20, 20, 20);
-}
-.logo-dark{
-  color: #fff;
-}
+
 
 .header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 5%;
-  margin-bottom: 20px;
+  padding: 1% 5%;
 }
 .header h2{
   font-size: 2.3rem;
-  color: purple;
+  color: var(--color-primary-200);
+  letter-spacing: 1px;
 }
-.header-dark h2{
-  color: rgb(124, 29, 124);
+.App-dark .header h2{
+    color: var(--color-primary-200);
 }
+
 .logos{
   display: flex;
   align-items: center;
@@ -59,38 +68,135 @@
 }
 
 .box{
-  transition: .1s background ease-in;
   position: relative;
   width: 48%;
-  margin: auto;
+  margin: 2% auto;
   border-radius: 20px;
-  text-align: left;
-  padding: 30px 30px;
+  padding:3% ;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-h2{
+.box h2{
   text-align: center;
   padding-top: 10px;
-  color: purple;
-  margin-bottom: 10px;
+  color: var(--color-primary-200);
+  margin-bottom: 2%;
   font-size:2rem;
 }
 .action-button{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   margin-top: 10px;
 }
 .action-button button{
-  background: purple;
+  transition: .3s ease-in;
+  background: var(--color-primary-200);
   width: 45%;
   border: none;
-  padding:10px;
+  padding:2% 3%;
   font-size: 1.2rem;
   cursor: pointer;
   color: #fff;
   border-radius: 20px;
 }
 .action-button button:hover{
-  background: rgba(141, 8, 141);
+  background: var(--color-primary-100);
+}
+.App-dark{
+  background: var(--color-surface-mixed-200);
+}
+.App-dark logos i{
+  transition: .3s ease-in;
+  color: rgb(211, 207, 207);
+}
+
+.App-dark .box{
+  transition: .8s background ease-in;
+  background: var(--color-surface-mixed-200);
+}
+.App-dark .action-button button{
+  background-color:var(--color-primary-400) ;
+}
+.App-dark .action-button button:hover{
+  background-color:var(--color-primary-300) ;
+}
+.header-dark h2{
+  color:var(--color-primary-400);
+}
+.logo-dark{
+  color: #fff;
+}
+@media screen and (max-width:990px) {
+  .text h2{
+    font-size: 1.5rem;
+  }
+  .text h3{
+    font-size: 1rem;
+  }
+  .name span{
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width:850px) {
+  .box{
+    width: 75%;
+  }
+
+}
+@media screen and (max-width:558px) {
+  .header h2{
+    font-size: 1.9rem;
+  }
+  .header i{
+    font-size: 1.6rem;
+  }
+  .logos{
+    gap: 0;
+  } 
+  .github,.mode{
+    padding: 5px;
+    margin-left: 10px;
+  }
+ 
+  .action-button label,.action-button i{
+    font-size:1rem ;
+  }
+  .action-button button{
+    padding:0 3%;
+  }
+  .text h2{
+    font-size: 1.3rem;
+  }
+  .text h3{
+    font-size: .8rem;
+  }
+  .name span{
+    font-size: .8rem;
+  }
+  .name input::placeholder{
+    font-size: .7rem;
+  }
+  .name input{
+    font-size: .8rem;
+  }
+  
+}
+@media screen and (max-width:400px) {
+  .header h2{
+    font-size: 1.5rem;
+  }
+  .header i{
+    font-size: 1.4rem;
+  }
+  .action-button label,.action-button i{
+    font-size:.8rem ;
+  }
+  .text h2{
+    font-size: 1.2rem;
+  }
+  .text h3{
+    font-size: .7rem;
+  }
 }

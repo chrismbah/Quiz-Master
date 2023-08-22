@@ -1,19 +1,26 @@
   .menu .text{
-    margin-bottom: 50px;
+    margin-bottom: 6%;
   }
   .text h2,.text h3{
-    transition: .3s ease-in;
+    transition: .3s ease-in-out;
     font-weight: 500;
   }
-  .dark-menu .text h2,.dark-menu h3{
-    color:  rgb(124, 29, 124);
+  
+  .dark-menu .text h2{
+    transition: .3s ease-in-out;
+    color: var(--color-primary-400);
+  }
+  .dark-menu h3{
+    color: white;
+  font-weight: 300;
+
   }
   .dark-menu .name span{
-    color:  rgb(124, 29, 124);
+  color: var(--color-primary-400);
+
 
   }
   .dark-text{
-    /* color: rgb(146, 146, 146); */
     color: white;
 
   }
@@ -23,7 +30,6 @@
   }
   .dark-menu .name input{
     transition: .3s ease-in;
-    /* color: rgb(146, 146, 146); */
     color: white;
     border-bottom: 2px solid white;
     font-weight: 400;
@@ -31,13 +37,12 @@
   }
   .dark-menu .name input::placeholder{
     font-weight:300;
-    /* color: rgb(146, 146, 146); */
     color: white;
     transition: .3s ease-in;
 
   }
   .dark-right{
-    color: rgb(146, 146, 146);
+    color: white;
 
   }
   .name{
@@ -49,13 +54,12 @@
     transition: .3s ease-in;
     outline: none;
     border: none;
-    padding: 8px ;
-    width: 200px;
+    width: 70%;
     height: 1.5rem;
     font-size: 1.1rem;
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
     color: black;
-    margin-bottom: 50px;
+    margin-bottom: 7%;
     background: none;
     font-weight: 400;
   }
@@ -63,12 +67,11 @@
     transition: .3s ease-in;
     color: black;
     font-weight: 300;
-    font-size: .9rem;
-
+    font-size: 1rem;
   }
   .name span{
     font-size: 1.2rem;
-    color: purple;
+    color: var(--color-primary-200);
     font-weight: 500;
   }
   .right{

@@ -15,11 +15,11 @@ export default function Category() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 200,
-        damping: 15,
-      },
+      // transition: {
+      //   type: "spring",
+      //   stiffness: 200,
+      //   damping: 15,
+      // },
     },
   };
   return (
