@@ -8,7 +8,7 @@ export const QuizApp = createContext();
 
 export default function App() {
   const [quizCategory, setQuizCategory] = useState("science");
-  const [quizState, setQuizState] = useState("category");
+  const [quizState, setQuizState] = useState("menu");
   const [score, setScore] = useState(0);
   const [dark, setDark] = useState(false);
 
@@ -36,14 +36,11 @@ export default function App() {
           <div className="logos">
             <div className={`github ${dark ? "logo-dark" : ""}`}>
               <a href="https://github.com/chrismbah/Quiz-Master-Pro">
-                <i class="fa-brands fa-github"></i>
+              <i class='bx bxl-github' ></i>
               </a>
             </div>
             <div className={`mode ${dark ? "logo-dark" : ""}`}>
-              <i
-                class={` fa-solid ${dark ? " fa-sun" : "fa-moon"}`}
-                onClick={toggleBtn}
-              ></i>
+            <i class={`bx ${dark?"bx-sun":"bxs-moon"}`} onClick={toggleBtn} ></i>
             </div>
           </div>
         </div>

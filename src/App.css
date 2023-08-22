@@ -53,8 +53,11 @@
 
 }
 .logos i{
+  transition:.3s ease-in;
   cursor: pointer;
+  font-size:2.3rem;
 }
+
 .box{
   transition: .1s background ease-in;
   position: relative;
