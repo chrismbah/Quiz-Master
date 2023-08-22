@@ -44,7 +44,7 @@ export default function ComicsQuiz() {
               }`}
               onClick={() => setOptionChosen("A")}
             >
-              <span>A.</span> {Comics[curr].A}
+              <span>A.</span>  {Comics[curr].A}
             </button>
           </div>
           <div className="option">

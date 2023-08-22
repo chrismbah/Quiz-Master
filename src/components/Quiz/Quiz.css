@@ -21,41 +21,34 @@
     transition:.3s ease;
   
   }
-  .options button{
-    transition: .3s background ease-in;
-  }
   .option-button:hover{
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px;
   }
   .selected{
     background-color: purple;
     color: white;
   }
-  .option .option-button {
-    transition: .3s ease-in;
-    /* transition: .3s color background ease-in; */
+  .option-button{
+    transition: .3s background ease-in,.3s color ease-in;
   }
+  
 .quiz-dark .question h3{
-    transition: .3s ease-in;
      color: rgb(211, 207, 207);
 }
 .quiz-dark .options button{
-    transition: .3s background ease-in;
     background: rgb(20, 20, 20);
     color: rgb(211, 207, 207);
 
 }
 .quiz-dark .options button:hover{
-    box-shadow: rgba(0, 0, 0, 0.507) 0px 4px 12px;
-
-
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 6px;
+     
 }
 .quiz-dark .options .selected{
     background-color: purple;
     color: white;
   }
 .quiz-dark .option .option-button {
-    transition: .3s ease-in;
-    /* transition: .3s color background ease-in; */
+    transition: .3s background ease-in,.3s color ease-in;
 
 }
