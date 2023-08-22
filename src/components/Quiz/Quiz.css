@@ -1,6 +1,6 @@
-.question span{
+  .question span{
     font-size: 1.7rem;
-    color: purple;
+    color: var(--color-primary-200);
   }
   .question h3{
     transition: .3s ease-in;
@@ -10,6 +10,7 @@
     margin-bottom: 20px;
   }
   .option-button{
+    transition: .3s background ease-in,.3s color ease-in;
     width: 100%;
     padding:12px;
     margin: 5px 0 15px;
@@ -18,37 +19,30 @@
     font-size:1.2rem;
     cursor:pointer;
     border-radius: 20px;
-    transition:.3s ease;
-  
   }
   .option-button:hover{
     box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px;
   }
-  .selected{
-    background-color: purple;
+  .selected{  
+    background-color:var(--color-primary-200) ;
     color: white;
-  }
-  .option-button{
-    transition: .3s background ease-in,.3s color ease-in;
   }
   
-.quiz-dark .question h3{
+  .quiz-dark .question span{
+    color:var(--color-primary-400);
+  }  
+  .quiz-dark .question h3{
      color: rgb(211, 207, 207);
-}
-.quiz-dark .options button{
-    background: rgb(20, 20, 20);
+  }
+  .quiz-dark .option .option-button{
+    transition: .3s background ease-in,.3s color ease-in;
+    background-color: var(--color-surface-mixed-200);
     color: rgb(211, 207, 207);
-
-}
-.quiz-dark .options button:hover{
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 6px;
-     
-}
-.quiz-dark .options .selected{
-    background-color: purple;
+  }
+  .quiz-dark .option-button:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 6px; 
+  }
+  .quiz-dark .options .selected{
+    background-color: var(--color-primary-400);
     color: white;
   }
-.quiz-dark .option .option-button {
-    transition: .3s background ease-in,.3s color ease-in;
-
-}
