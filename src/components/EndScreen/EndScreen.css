@@ -9,37 +9,37 @@
     margin-bottom:30px ;
 }
 .restart{
+  transition:.3s ease-in;
+
     display: flex;
     align-items:center;
     flex-direction: column;
 }
-.restart button{
+.restart .btn{
     width: 100%;
     padding:12px;
     margin: 5px 0 15px;
     background-color: #fff;
-    border:none;
     font-size:1.2rem;
     cursor:pointer;
     border-radius: 20px;
     transition:.3s ease-in;
+    text-align: center;
 }
-.restart button:hover{
-    transition:.3s ease-in;
-
+.restart .btn:hover{
+  transition:.3s ease-in;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     
 }
-.end-dark button{
-    transition:.3s ease-in;
-    color: white;
-    background: rgb(20, 20, 20);
+.end-dark .btn{
+    transition:.3s background ease-in;
+    color: rgb(211, 207, 207);
+    background-color: var(--color-surface-mixed-200);
     
 }
- .end-dark button:hover{
-    transition:.3s ease-in;
-  background-color: rgb(29, 29, 29);
-    box-shadow: none
+ .end-dark .btn:hover{
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 12px;
+
   }
   .end-dark .score{
     transition: .3s ease-in;

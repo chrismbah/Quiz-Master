@@ -31,12 +31,12 @@ export default function End() {
           <span>{score}</span>/{20}
         </div>
         <div className="restart">
-          <button onClick={restart} >
+          <div onClick={restart} className="btn" >
             Restart Quiz
-          </button>
-          <button onClick={exit} >
+          </div>
+          <div onClick={exit} className="btn" >
             Exit
-          </button>
+          </div>
         </div>
       </motion.div>
     </div>

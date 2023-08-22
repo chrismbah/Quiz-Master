@@ -72,9 +72,9 @@
   width: 48%;
   margin: 2% auto;
   border-radius: 20px;
-  padding:3% ;
+  padding:3%  ;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  height: 70vh;
+  /* height: 70vh; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -138,10 +138,19 @@
   .name span{
     font-size: 1rem;
   }
+  .end-text h2{
+    font-size:1.6rem ;
+  }
+  .score{
+    font-size: 1.2rem;
+  }
 }
 @media screen and (max-width:850px) {
   .box{
     width: 75%;
+  }
+  .select-text h2{
+    font-size: 1.7rem;
   }
 
 }
@@ -159,7 +168,16 @@
     padding: 5px;
     margin-left: 10px;
   }
- 
+  .select-options button{
+    font-size: 1.2rem;
+  }
+
+  .question h3{
+    font-size: 1rem;
+  }
+  .question span{
+    font-size: 1.4rem;
+  }
   .action-button label,.action-button i{
     font-size:1rem ;
   }
@@ -180,6 +198,9 @@
   }
   .name input{
     font-size: .8rem;
+  }
+  .end-text h2{
+    font-size:1.3rem ;
   }
   
 }

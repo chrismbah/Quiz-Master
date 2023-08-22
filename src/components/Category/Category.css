@@ -21,7 +21,7 @@
     margin-right:10px
 }
 .select-options i{
-    color:purple;
+  color: var(--color-primary-200);
 }
 .category .action-button button{
   bottom: 5%;
@@ -31,6 +31,7 @@
   color: rgb(211, 207, 207);
 }
 .category-dark .select-options button:hover{
-  background-color: rgb(29, 29, 29);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 12px;
+
 
 }
