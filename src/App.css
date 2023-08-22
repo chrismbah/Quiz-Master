@@ -56,7 +56,7 @@
   cursor: pointer;
 }
 .box{
-  transition: .1s ease-in;
+  transition: .1s background ease-in;
   position: relative;
   width: 48%;
   margin: auto;
