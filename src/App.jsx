@@ -8,7 +8,7 @@ export const QuizApp = createContext();
 
 export default function App() {
   const [quizCategory, setQuizCategory] = useState("science");
-  const [quizState, setQuizState] = useState("end");
+  const [quizState, setQuizState] = useState("menu");
   const [score, setScore] = useState(0);
   const [dark, setDark] = useState(false);
 
@@ -48,10 +48,10 @@ export default function App() {
           </div>
         </div>
         {/* <div className="sections"> */}
-          {quizState === "menu" && <Menu />}
-          {quizState === "category" && <Category />}
-          {quizState === "quiz" && <Quiz />}
-          {quizState === "end" && <End />}
+        {quizState === "menu" && <Menu />}
+        {quizState === "category" && <Category />}
+        {quizState === "quiz" && <Quiz />}
+        {quizState === "end" && <End />}
         {/* </div> */}
       </div>
     </QuizApp.Provider>
