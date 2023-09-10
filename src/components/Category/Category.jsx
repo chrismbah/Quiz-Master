@@ -14,12 +14,7 @@ export default function Category() {
     hidden: { opacity: 0, y: 70 },
     visible: {
       opacity: 1,
-      y: 0,
-      // transition: {
-      //   type: "spring",
-      //   stiffness: 200,
-      //   damping: 15,
-      // },
+      y: 0
     },
   };
   return (
