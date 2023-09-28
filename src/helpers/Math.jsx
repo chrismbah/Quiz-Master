@@ -19,7 +19,7 @@ export const Math = [
       C: "18",
       D: "24"
     ,
-    answer: "B"
+    answer: "C"
   },
   {
     no: 3,
@@ -52,7 +52,7 @@ export const Math = [
       C: "x = 8",
       D: "x = 10"
     ,
-    answer: "A"
+    answer: "C"
   },
   {
     no: 6,
@@ -107,7 +107,7 @@ export const Math = [
       C: "45",
       D: "54"
     ,
-    answer: "D"
+    answer: "C"
   },
   {
     no: 11,
@@ -173,7 +173,7 @@ export const Math = [
       C: "6",
       D: "9"
     ,
-    answer: "B"
+    answer: "C"
   },
   {
     no: 17,
@@ -184,7 +184,7 @@ export const Math = [
       C: "42",
       D: "60"
     ,
-    answer: "C"
+    answer: "B"
   },
   {
     no: 18,
@@ -217,7 +217,7 @@ export const Math = [
       C: "25π",
       D: "50π"
     ,
-    answer: "C"
+    answer: "A"
   }
 
 ];
